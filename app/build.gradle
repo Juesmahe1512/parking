@@ -22,8 +22,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "Boolean", "Debug_mode", "false"
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -33,17 +35,17 @@ android {
     }
 }
 
-jacoco {
-    toolVersion = '0.8.1'
-}
-
-task jacocoTestReport(type: JacocoReport, dependsOn: "testDebugUnitTest") {
-    group = "Reporting"
-    description = "Generate Jacoco coverage reports after running tests."
-    reports {
-        xml.enabled = true
+    jacoco {
+        toolVersion = '0.8.1'
     }
-}
+
+    task jacocoTestReport(type: JacocoReport, dependsOn: "testDebugUnitTest") {
+        group = "Reporting"
+        description = "Generate Jacoco coverage reports after running tests."
+        reports {
+            xml.enabled = true
+        }
+    }
 
 dependencies {
 
@@ -55,4 +57,5 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
 }
