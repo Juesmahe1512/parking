@@ -47,7 +47,7 @@ pipeline {
         stage('Unit Tests') {
                     steps{
                         echo "------------>Unit Tests<------------"
-                     sh './gradlew --b build.gradle'
+                     sh './gradlew --b build.gradle test --scan'
                     }
 
         }
