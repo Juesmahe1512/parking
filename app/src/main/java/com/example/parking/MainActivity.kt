@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        registrarPlaca()
+      //  registrarPlaca()
 
     }
 
@@ -28,12 +28,12 @@ class MainActivity : AppCompatActivity() {
         println("oe $cc")
     }
 
-    fun registrarPlaca() {
+   /* fun registrarPlaca() {
         var btnEnviarPlaca: Button = findViewById(R.id.btn_enviar_placa)
         btnEnviarPlaca.setOnClickListener{
             Toast.makeText(this.applicationContext,"Evento Boton",Toast.LENGTH_SHORT).show()
         }
 
-    }
+    } */
 
 }
