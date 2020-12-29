@@ -20,7 +20,7 @@ class ExampleUnitTest {
 
         //Arrange
         var prueba = pruebaSuma()
-        var resultadoEsperado = 10
+        var resultadoEsperado = 9
 
         //Act
         var resultado = prueba.sumaDosNumeros(5, 5)
